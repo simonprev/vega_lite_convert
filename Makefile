@@ -42,13 +42,9 @@ format: ## Format project files
 	mix rust.fmt
 
 .PHONY: lint
-lint: lint-elixir lint-rust ## Lint project files
+lint: lint-elixir ## Lint project files
 
 .PHONY: lint-elixir
 lint-elixir:
 	mix compile --warnings-as-errors --force
 	mix credo --strict
-
-.PHONY: lint-rust
-lint-rust:
-	mix rust.lint
