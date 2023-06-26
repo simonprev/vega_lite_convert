@@ -10,6 +10,7 @@ defmodule VegaLiteConvert.MixProject do
       app: :vega_lite_convert,
       version: @version,
       package: package(),
+      description: "Interface for vl-convert-rs crate, VegaLite component spec to SVG.",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -45,7 +46,6 @@ defmodule VegaLiteConvert.MixProject do
       licenses: ["BSD-3-Clause"],
       links: %{github: "https://github.com/simonprev/vega_lite_convert"},
       files: [
-        "dist",
         "lib",
         "mix.exs",
         "README.md",
