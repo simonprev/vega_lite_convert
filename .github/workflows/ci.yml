@@ -1,0 +1,22 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    env:
+      RUST_TOOLCHAIN_VERSION: nightly-2023-02-14
+      VEGA_LITE_CONVERT_BUILD: true
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "${{ env.RUST_TOOLCHAIN_VERSION }}"
+
+      - run: make prepare
+      - run: make lint
+      - run: make check-github
