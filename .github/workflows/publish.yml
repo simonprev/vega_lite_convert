@@ -10,9 +10,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      HEX_API_KEY: ${{ secrets.MIREGO_HEXPM_API_KEY }}
+      HEX_API_KEY: ${{ secrets.HEXPM_API_KEY }}
       RUST_TOOLCHAIN_VERSION: nightly-2023-02-14
-      TELEMETRY_UI_BUILD: true
+      VEGA_LITE_CONVERT_BUILD: true
 
     steps:
       - uses: actions/checkout@v2
