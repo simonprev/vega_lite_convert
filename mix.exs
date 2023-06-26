@@ -3,7 +3,7 @@ defmodule VegaLiteConvert.MixProject do
 
   @force_build? System.get_env("VEGA_LITE_CONVERT_BUILD") in ["1", "true"]
 
-  @version "0.4.0"
+  @version "0.5.0"
 
   def project do
     [
