@@ -17,6 +17,11 @@ jobs:
         with:
           toolchain: "${{ env.RUST_TOOLCHAIN_VERSION }}"
 
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: 25.x
+          elixir-version: 1.14.x
+
       - run: make prepare
       - run: make lint
       - run: make check-github
