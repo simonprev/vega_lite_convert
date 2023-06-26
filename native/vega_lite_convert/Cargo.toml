@@ -10,7 +10,7 @@ path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-rustler = "0.27.0"
+rustler = "0.29.0"
 vl-convert-rs = "0.7.0"
 serde_json = "1.0.85"
 tokio = {version="1.21", features=["macros", "rt-multi-thread"]}
