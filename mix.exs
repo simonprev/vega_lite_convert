@@ -31,11 +31,11 @@ defmodule VegaLiteConvert.MixProject do
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:rustler, "~> 0.27", optional: not @force_build?},
       {:rustler_precompiled, "~> 0.5"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
   end
